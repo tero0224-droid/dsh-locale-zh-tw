@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Syntax check the client bundle and host half
+        run: |
+          node --check client.js
+          node --check index.js
+
+      - name: Verify client.js is in sync with the template and tables
+        run: |
+          cd tools
+          npm install --no-audit --no-fund
+          node build.mjs
+          cd ..
+          git diff --exit-code -- client.js
+
+      - name: Smoke test (fake locale runtime)
+        run: node tools/smoke.mjs
