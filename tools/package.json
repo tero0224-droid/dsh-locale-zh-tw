@@ -1,0 +1,9 @@
+{
+  "name": "dsh-locale-zh-tw-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build tooling for dsh-locale-zh-tw: regenerates client.js from tools/client.template.js.",
+  "dependencies": {
+    "opencc-js": "^1.4.2"
+  }
+}

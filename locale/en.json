@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Traditional Chinese (Taiwan)",
+    "description": "Adds 繁體中文 to Settings → General → Language. Every dictionary the interface already holds is converted from Simplified to Taiwan Traditional Chinese at lookup time, so new UI strings and newly installed plugins are covered without re-translation. Conversion is local (2,644 characters + 114 UI phrases from OpenCC); nothing is sent anywhere and no model request is added. Known limits: strings captured at registration time (such as command descriptions) keep their original form until re-registration, and rule-based wording can pick an imperfect term."
+  }
+}

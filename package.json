@@ -1,0 +1,44 @@
+{
+  "name": "dsh-locale-zh-tw",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Traditional Chinese (Taiwan) interface language pack for the DeepSeek Harness web GUI, converting the shipped Simplified Chinese dictionaries at runtime.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "locale",
+    "language-pack",
+    "traditional-chinese",
+    "zh-tw"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
