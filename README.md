@@ -7,8 +7,8 @@ DeepSeek Harness ships eight interface languages — English, Simplified Chinese
 ## Install
 
 ```sh
-# from GitHub (replace with the published repository)
-dsh plugin --profile <profile> add github:<owner>/<repo>
+# from GitHub
+dsh plugin --profile <profile> add github:cobrasnac/dsh-locale-zh-tw
 
 # or from a local checkout
 dsh plugin --profile <profile> add /absolute/path/to/dsh-locale-zh-tw
