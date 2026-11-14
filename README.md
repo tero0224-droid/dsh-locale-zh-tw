@@ -1,5 +1,7 @@
 # dsh-locale-zh-tw
 
+[![ci](https://github.com/tero0224-droid/dsh-locale-zh-tw/actions/workflows/ci.yml/badge.svg)](https://github.com/tero0224-droid/dsh-locale-zh-tw/actions/workflows/ci.yml)
+
 Traditional Chinese (Taiwan) interface language pack for the [DeepSeek Harness](https://github.com/deepseek-ai) web GUI.
 
 DeepSeek Harness ships eight interface languages — English, Simplified Chinese, Japanese, Spanish, French, German, Russian and Brazilian Portuguese. This bundle adds **繁體中文** to that list without shipping thousands of translated strings: at lookup time it converts the installed Simplified Chinese dictionary entries to Taiwan Traditional Chinese, so new UI strings and newly installed plugins are covered automatically.
